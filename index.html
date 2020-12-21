@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<!-- Add link to Bootstrp content delivery network (CDN)-->
+<link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+<!--Add link to stylesheet under the link to Bootstrap's CDN-->
+<link rel="stylesheet" href="style.css"
+    />
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row" style="text-align:center">
+      <h2>Believe it or not, the bateria in your belly button may hold the key to future hamburgers!</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well"> <!-- start of drop-down div -->
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-primary"> <!-- start of information panel -->
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-6" style="text-align: right">
+        <h4>Oh good, a chart that tells us about washing habits!</h4>
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-4">
+        <h2>This chart gives you an idea of the bacterial party taking place in your belly button!</h2>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>This Bubble Chart Provides Further Proof of Colonization on a Massive Scale!!</h3>
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
